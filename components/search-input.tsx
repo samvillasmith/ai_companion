@@ -1,14 +1,20 @@
 "use client";
 import { Search } from 'lucide-react';
 import { Input } from "@/components/ui/input";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export const SearchInput =()=>{
+
+    const router = useRouter();
+    const searchParams = useSearchParams();
+
     return(
         <div className="relative">
-            <Search classame="absolute h-4 w-4 top-3 left-4 text-muted-foreground" /> 
+            <Search className="absolute h-4 w-4 top-3 left-4 
+            text-muted-foreground" /> 
             <Input 
-                
-            
+                placeholder="Search..."
+                className="pl-10 bg-primary/10"
             />
         </div>
     )
